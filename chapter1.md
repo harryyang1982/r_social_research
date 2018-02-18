@@ -74,7 +74,7 @@
     ## 2 versicolor         5.94
     ## 3 virginica          6.59
 
-![](1장_-_수업_안내_files/figure-markdown_github/classification-4.png)
+![](classification-4.png)
 
 이렇게 데이터의 내용을 평가하는 작업을 EDA(Exploratory Data Anaylsis)라고 한다. Sepal.Length, Petal.Length, Petal.Width의 분포를 살피면 분류할 수 있는 아이디어를 얻을 수 있다. 실제로 이를 검증해 보기 위해 의사결정트리(Decision Tree)를 만들어 볼 수 있다.
 
@@ -90,7 +90,7 @@
     ##   versicolor      0         26         3
     ##   virginica       0          1        27
 
-![](1장_-_수업_안내_files/figure-markdown_github/classification%20decision%20tree-1.png)
+![](classification%20decision%20tree-1.png)
 
 위의 코드를 통해서, 붓꽃의 종류는 Petal Length가 1.9보다 작거나 같을 경우 setosa일 확률이 높고, 그렇지 않을 경우 Petal Width가 1.7보다 작거나 같으면 versicolor, Petal Width가 1.7보다 클 경우 virginica임을 알 수 있다.
 
@@ -242,7 +242,7 @@
     ## 
     ## $plot
 
-![](1장_-_수업_안내_files/figure-markdown_github/anomaly%20detection-1.png)
+![](anomaly%20detection-1.png)
 
 이러한 그래프를 통해 특이한 지점(9월 30일 저녁)을 포착하고, 이에 따른 진단을 할 수 있는 것이다.
 
@@ -277,7 +277,7 @@
     ## 1 (Intercept) 6.76409784 0.6075916  11.13264 3.307215e-20
     ## 2          TV 0.05028368 0.0034632  14.51943 3.413075e-28
 
-![](1장_-_수업_안내_files/figure-markdown_github/linear%20regression-1.png)
+![](linear%20regression-1.png)
 
 회귀분석을 통해 tv광고를 한 번 하면 스마트폰 0.05대를 팔 수 있다는 결과가 나온다. 즉 1대를 팔기 위해서는 TV광고가 20번 이상 노출되어야 가능하다는 것이다. 그리고 p-value를 통해서 그런 검증이 얼마나 맞는지를 확인할 수 있다. training set과 test set을 활용하면, 그 사례를 가지고 다른 사례에도 적용가능한지를 시뮬레이션 해볼 수 있다.
 
@@ -322,7 +322,7 @@
     ##        AIC      BIC deviance df.residual
     ## 1 455.5116 469.5317 275.3046         118
 
-![](1장_-_수업_안내_files/figure-markdown_github/linear%20regression%202-1.png)
+![](linear%20regression%202-1.png)
 
 TV 광고만 했을 때와, 라디오, 신문광고를 포함했을 때의 효과를 함께 비교해 볼 수도 있다. 회귀분석은 즉, 이렇게 다양한 변수를 통해서 우리가 원하는 예측을 도출할 수 있는 방법이다.
 
@@ -342,7 +342,7 @@ TV 광고만 했을 때와, 라디오, 신문광고를 포함했을 때의 효�
     ## Maximal term length: 18
     ## Weighting          : term frequency (tf)
 
-![](1장_-_수업_안내_files/figure-markdown_github/text%20clustering-1.png)
+![](text%20clustering-1.png)
 
 4권의 책이 나오고, 실제로 그 추정이 제대로 맞아 떨어짐을 확인할 수 있다.
 
