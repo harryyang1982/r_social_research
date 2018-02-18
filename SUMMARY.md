@@ -1,7 +1,7 @@
 # Summary
 
 * [소개](README.md)
-* 1장 - 수업개요
+* [1장 - 데이터분석가가 하는 일\(수업 안내\)](chapter1.md)
 * [2장 - R/Rstudio 설치와 기본 문법](chapter2.md)
 * [3장 - 데이터 구조와 엑셀](chapter3.md)
 * [4장 - R 프로그래밍 1/2 기초 연산](chapter4.md)
