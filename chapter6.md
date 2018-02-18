@@ -122,7 +122,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
 ```
 
-![](shape-1.png)
+![](%20shape-1.png)
 
 ``` r
 ggplot(data = mpg) + 
@@ -135,7 +135,7 @@ ggplot(data = mpg) +
 
     ## Warning: Removed 62 rows containing missing values (geom_point).
 
-![](shape-2.png)
+![](%20shape-2.png)
 
 그런데, 아까 aes 안에는 변수만 넣을 수 있다고 했다. 만약 그 안에 색깔을 상수로 지정하면 어떻게 될까? 바깥에 빼면 또 어떻게 될까? 비교해 보자.
 
