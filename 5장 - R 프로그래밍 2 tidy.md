@@ -1,12 +1,7 @@
 ---
 title: "5장 - R 프로그래밍 2"
 author: "양승훈"
-date: '2018 2 7 '
-output:
-  word_document: default
-  html_document: default
-  md_document:
-    variant: markdown_github
+date: '2018/2/7'
 ---
 
 ## 안내
