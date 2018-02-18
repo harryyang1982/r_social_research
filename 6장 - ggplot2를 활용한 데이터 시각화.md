@@ -1,10 +1,7 @@
 ---
 title: "6장 - 데이터 시각화"
 author: "양승훈"
-date: '2018 2 7 '
-output:
-  word_document: default
-  html_document: default
+date: '2018/2/7'
 ---
 
 ## 안내
