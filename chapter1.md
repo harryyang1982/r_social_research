@@ -65,7 +65,7 @@
 
 아이리스라는 데이터를 활용해 보겠다. 아이리스 데이터는 통계학자인 피셔Fisher가 소개한 데이터로, 붓꽃의 3가지 종(setosa, versicolor, virginica)에 대해 꽃받침(sepal)과 꽃잎(petal)의 길이를 정리한 데이터다.
 
-![](1장_-_수업_안내_files/figure-markdown_github/classification-1.png)![](1장_-_수업_안내_files/figure-markdown_github/classification-2.png)![](1장_-_수업_안내_files/figure-markdown_github/classification-3.png)
+![](classification-1.png)![](classification-2.png)![](classification-3.png)
 
     ## # A tibble: 3 x 2
     ##   Species    Sepal.Length
