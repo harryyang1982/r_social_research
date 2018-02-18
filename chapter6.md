@@ -79,7 +79,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/scatterplot-1.png)
+![](scatterplot-1.png)
 
 여러분의 첫번째 그래프이다. 우측 하단의 'Plots' 버튼을 누르고 창을 보면 그래프를 확인할 수 있다.
 
@@ -100,7 +100,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/color-1.png)
+![](color-1.png)
 
 범주를 나타내는 class의 속성에 따라 색깔이 다르게 나타나는 것을 확인할 수 있다. 보니까 2인승 차들만 엔진이 커도 연비가 좋은 걸로 나온다. 이 전의 코드와 달라진 건 color 변수를 추가한 것이다. color에 분류 하고 싶은 변수를 집어 넣으면 그 타입에 따라서 색깔이 다르게 나온다.
 
@@ -113,7 +113,7 @@ ggplot(data = mpg) +
 
     ## Warning: Using size for a discrete variable is not advised.
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/size-1.png)
+![](size-1.png)
 
 이번에는 class를 통해 점의 크기를 조정해 봤다. 그러나 좋은 분류는 아닌 것 같다. 좀 다른 방식(alpha나 shape)을 활용해 볼 수도 있다.
 
@@ -122,7 +122,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/alpha%20/%20shape-1.png)
+![](shape-1.png)
 
 ``` r
 ggplot(data = mpg) + 
@@ -135,7 +135,7 @@ ggplot(data = mpg) +
 
     ## Warning: Removed 62 rows containing missing values (geom_point).
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/alpha%20/%20shape-2.png)
+![](shape-2.png)
 
 그런데, 아까 aes 안에는 변수만 넣을 수 있다고 했다. 만약 그 안에 색깔을 상수로 지정하면 어떻게 될까? 바깥에 빼면 또 어떻게 될까? 비교해 보자.
 
@@ -144,14 +144,14 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/cracked%20color-1.png)
+![](cracked%20color-1.png)
 
 ``` r
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/cracked%20color-2.png)
+![](cracked%20color-2.png)
 
 위에는 파란색("blue")을 썼으나 선홍색이 나오고, 아래에는 제대로 파란색이 나온다. 그런데 색깔을 쓰는 이유가 변수의 값에 따라 색깔을 바꿔주고 싶다는 것에서 출발한다는 것을 감안하면 별로 흥미로운 결과는 아닐 것이다.
 
@@ -166,14 +166,14 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 
     ## `geom_smooth()` using method = 'loess'
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](unnamed-chunk-1-1.png)
 
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_smooth(method = "lm")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/unnamed-chunk-1-2.png)
+![](unnamed-chunk-1-2.png)
 
 두 개의 그래프를 보자. 먼저 나온 그래프는 곡선형태를 띄고 있고, 나중의 그래프는 직선형태를 띄고 있다. 후자는 엑셀 그래프에서도 봤던 선형회귀선이고, 전자는 loess라는 방식을 통해서 값을 따라다니면서 만든 추세선이다(아무 옵션을 넣지 않으면 자동으로 method = "loess"가 적용된다). 좀 더 명확히 이해하기 위해 원래의 점을 추가해서 그려보자.
 
@@ -184,14 +184,14 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 
     ## `geom_smooth()` using method = 'loess'
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/scatterplot%20+%20smooth-1.png)
+![](scatterplot%20+%20smooth-1.png)
 
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_point() + geom_smooth(method = "lm")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/scatterplot%20+%20smooth-2.png)
+![](scatterplot%20+%20smooth-2.png)
 
 drv의 속성에 따라서 분류해 보면 어떨까? color는 해봤으니 이번에는 linetype으로 분류해 보자.
 
@@ -202,14 +202,14 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 
     ## `geom_smooth()` using method = 'loess'
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/linetype-1.png)
+![](linetype-1.png)
 
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) + 
   geom_point() + geom_smooth(aes(linetype = drv), method = "lm")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/linetype-2.png)
+![](linetype-2.png)
 
 linetype도 그래프를 잘 보여주지만, color가 좀 더 구분하기 쉬운 것 같다. 다시 시도해 보자.
 
@@ -220,7 +220,7 @@ ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
 
     ## `geom_smooth()` using method = 'loess'
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/color%20again-1.png)
+![](color%20again-1.png)
 
 이제 좀 drv의 속성에 따른 데이터 분포를 쉽게 파악할 수 있다.
 
@@ -246,14 +246,14 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point() + geom_jitter()
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/jitter-1.png)
+![](jitter-1.png)
 
 ``` r
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point(position = "jitter")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/jitter-2.png)
+![](jitter-2.png)
 
 그냥 geom\_point에 position = "jitter"를 추가해줘도 결과는 같다. jitter를 사용하면, 점들에 난수를 삽입해 근처로 흩어지게 해서 구분을 쉽게 하는 장점이 있다. 생각날 때 써보도록 하자.
 
@@ -268,7 +268,7 @@ ggplot(diamonds) +
   geom_bar(aes(x = cut))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/bar-1.png)
+![](bar-1.png)
 
 다이아몬드 세공수준에 따라 몇 개씩이 있는지를 쉽게 파악할 수 있다. 여기에 색깔을 넣고 싶다면, aes() 안에 fill = cut을 넣어주면 된다.
 
@@ -277,7 +277,7 @@ ggplot(diamonds) +
   geom_bar(aes(x = cut, fill = cut))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/color%20bar-1.png)
+![](color%20bar-1.png)
 
 조금 더 보기 좋아졌다. 막대그래프를 그리는 geom\_bar는 특별하게 변수를 지정하지 않으면 y 축에서 숫자를 센다. 즉 몇 개씩이 있는 지를 세는 것이다. 그리고 자동으로 모양을 적정한 수준에서 맞춰서 시각적으로 분포 시키는 것이다. 원리는 다음과 같다. (영어라도 눈으로 보면 된다.)
 
@@ -290,7 +290,7 @@ ggplot(data = diamonds) +
   stat_count(mapping = aes(x = cut, fill = cut))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/stat%20bar-1.png)
+![](stat%20bar-1.png)
 
 만약 세공 수준에 따른 빈도(1을 전체로 볼 때 0.1, 0.2 식으로..)로 보려면 어떻게 하면 될까? y 변수를 "..prop.."으로 지정하면 된다.
 
@@ -299,7 +299,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = cut, y = ..prop.., group = 1))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/prop%20bar-1.png)
+![](prop%20bar-1.png)
 
 #### histogram의 변형.
 
@@ -310,21 +310,21 @@ ggplot(diamonds) +
   geom_bar(aes(x = cut, fill = clarity))
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/divide-1.png)
+![](divide-1.png)
 
 ``` r
 ggplot(diamonds) + 
   geom_bar(aes(x = cut, fill = clarity), position = "fill")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/divide-2.png)
+![](divide-2.png)
 
 ``` r
 ggplot(diamonds) + 
   geom_bar(aes(x = cut, fill = clarity), position = "dodge")
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/divide-3.png)
+![](divide-3.png)
 
 첫 번째 그래프는 기존 히스토그램의 모양을 그대로 두고 clarity에 따라 그래프를 쪼갠 모양이다. 두 번째는 아예 전체를 100%라고 보고 clarity에 따라 %별로 쪼갠 그래프이다. 세번째는 두 가지를 혼합하여, cut 변수 각각의 상대적인 규모를 고려하여 clarity에 따라 쪼갠 히스토그램 그래프이다. 이런 세 가지 형태를 필요에 따라 유연하게 쓸 수 있게 될 수록 '고수'가 되는 길은 가까워 진다.
 
@@ -416,7 +416,7 @@ ggplot(smaller, aes(x = carat)) +
   geom_histogram(binwidth = 0.1) # 히스토그램 그리기
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/make%20smaller-1.png)
+![](make%20smaller-1.png)
 
 이번에는 geom\_bar 대신 geom\_histogram을 썼다. geom\_histogram은 히스토그램을 그리는 데 특화된 명령어이다. binwidth라는 인자(argument)를 활용해 급간을 잘라줄 수 있기 때문이다. 위에서는 0.1을 기준으로 잘라 봤다.
 
@@ -427,7 +427,7 @@ ggplot(smaller, aes(x = carat, colour = cut)) +
   geom_freqpoly(binwidth = 0.1)
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/geom_freqpoly-1.png)
+![](geom_freqpoly-1.png)
 
 ### 선 그래프 그리기
 
@@ -478,7 +478,7 @@ airquality2 %>%
   geom_line()
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/making%20line-1.png)
+![](making%20line-1.png)
 
 만약 5월과 8월의 그래프만 보고 싶다면 어떻게 하면 될까? airquality2 데이터 중 Month가 5, 8에 속하는 것만 추린 후 그래프를 그리면 될 것이다.
 
@@ -489,7 +489,7 @@ airquality2 %>%
   geom_line()
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](unnamed-chunk-3-1.png)
 
 그런데 이렇게 하면 5월과 8월의 같은 날짜끼리 겹치는 현상이 발생한다. 여기서 5월과 8월을 색깔을 통해 구분한다면 5월과 8월의 바람을 구분할 수 있을 것이다. 이럴 때는 점그래프를 그릴 때 활용했던 aes(color = var)를 활용하면 된다. 단, 색깔을 분명하게 구분짓기 위해서는 Month를 factor(Month) 형태로 바꿔줘야 한다.
 
@@ -500,7 +500,7 @@ airquality2 %>%
   geom_line()
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](unnamed-chunk-4-1.png)
 
 좀 더 효과를 극대화 하기 위해 점 그래프를 함께 붙여도 좋을 것이다.
 
@@ -511,7 +511,7 @@ airquality2 %>%
   geom_line() + geom_point()
 ```
 
-![](6장_-_ggplot2를_활용한_데이터_시각화_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](unnamed-chunk-5-1.png)
 
 #### 연습 문제
 
