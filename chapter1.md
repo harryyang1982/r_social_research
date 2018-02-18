@@ -92,6 +92,7 @@ iris %>%
   
 ```
 
+
 이렇게 데이터의 내용을 평가하는 작업을 EDA(Exploratory Data Anaylsis)라고 한다. Sepal.Length, Petal.Length, Petal.Width의 분포를 살피면 분류할 수 있는 아이디어를 얻을 수 있다. 실제로 이를 검증해 보기 위해 의사결정트리(Decision Tree)를 만들어 볼 수 있다.
 
 ```{r classification decision tree, echo = F, message = F, warning = F}
